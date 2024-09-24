@@ -1,0 +1,98 @@
+
+.kartyakontener {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+	margin-top: 140px;
+	margin-bottom: 100px; 
+}
+.card {
+    width: calc(50% - 20px);
+    height: 400px; /* Alapértelmezett magasság 400px */
+    perspective: 1000px;
+}
+
+/* Media query a magasság beállításához */
+@media (min-width: 1421px) {
+    .card {
+        height: 600px; /* Ha a képernyő szélessége 1421px folott van, akkor a kep magassága 600px legyen */
+    }
+}
+
+@media (max-width: 1420px) and (min-width: 1051px) {
+    .card {
+        max-height: 400px; /* Ha a képernyő szélessége 1420px és 1051px között van, akkor a magasság 400px legyen */
+    }
+}
+
+/* Media query az elrendezéshez */
+@media (max-width: 1050px) {
+    .card {
+        width: calc(100% - 20px); /* Ha a képernyő szélessége 1050px alá esik, akkor a kártyák teljes szélességgel legyenek egymás alatt */
+    }
+}
+  
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+  
+.card:hover .content {
+    transform: rotateY( 180deg );
+    transition: transform 0.5s;
+}
+  
+.front,
+.back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+  
+.back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    backface-visibility: hidden;
+    transform: rotateY( 180deg );
+}
+
+.back h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.back p {
+	text-align: justify;
+    font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.back a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.back a:hover{
+	color:#333;
+	background-color: #fff;
+}
+
+

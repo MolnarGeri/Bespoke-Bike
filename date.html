@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Időpontfoglalás</title>
+	<link rel="stylesheet" href="menustyle.css">
+    <link rel="stylesheet" href="datestyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><img src="kepek/logo.png" alt="logo"></a>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="burger-icon">&#9776;</label>
+        <nav class="navbar" id="service-navbar">
+            <ul>
+                <li><a href="index.html">Főoldal</a></li>
+                <li><a href="service.html">Szolgáltatások</a></li>
+                <li><a href="galery.html">Galéria</a></li>
+                <li><a href="pricelist.html">Áraink</a></li>
+                <li><a href="aboutus.html">Rólunk</a></li>
+                <li><a href="date.html">Időpont</a></li>
+            </ul>
+        </nav>
+	</header>
+	
+	<div class="flexcontainer">
+		<div class="container">
+		  <h1 class="form-title">Időpontfoglalás</h1>
+		  <form action="#">
+			<div class="main-user-info">
+			  <div class="user-input-box">
+				<label for="fullName">Teljes név</label>
+				<input type="text"
+						id="fullName"
+						name="fullName"
+						placeholder="Teljes név"/>
+			  </div>
+			<div class="user-input-box">
+				<label for="email">Email</label>
+				<input type="email"
+						id="email"
+						name="email"
+						placeholder="Enter Email"/>
+			  </div>
+			  <div class="user-input-box">
+				<label for="phoneNumber">Telefonszám</label>
+				<input type="text"
+						id="phoneNumber"
+						name="phoneNumber"
+						placeholder="Telefonszám"/>
+			</div>
+			<div class="user-input-box">
+			  <label for="service">Szolgáltatás</label>
+			  <select id="service" name="service">
+				<option value="option1">-----</option>
+				<option value="option2">Konzultáció</option>
+				<option value="option3">Privát stílustanácsadás</option>
+				<option value="option4">Prémium Bespoke Bike</option>
+				<option value="option5">Elite Bespoke Bike</option>
+				<option value="option6">Master Bespoke Bike</option>
+				<option value="option7">Basic Bespoke Bike</option>
+				<option value="option8">Bike Rental</option>
+				<option value="option9">Bike Renovation</option>
+				<option value="option10">Céges kereképár</option>
+			  </select>
+			</div>
+			  <div class="user-input-box">
+          <label for="appointmentDate">Időpont</label>
+          <input type="date" id="appointmentDate" name="appointmentDate" />
+        </div>
+        <div class="user-input-box">
+          <label for="comment">Megjegyzés</label>
+          <textarea id="comment" name="comment" placeholder="Írja ide a megjegyzést"></textarea>
+        </div>
+      </div>
+			<div class="person-details-box">
+			  <span class="person-title">Számla</span>
+			  <div class="person-category">
+				<input type="radio" name="person" id="person">
+				<label for="person">Magánszemély</label>
+				<input type="radio" name="person" id="ceg">
+				<label for="ceg">Cég</label>
+				<input type="radio" name="person" id="other">
+				<label for="other">Más</label>
+			  </div>
+			</div>
+			<div class="form-submit-btn">
+			  <input type="submit" value="Foglal">
+			</div>
+		  </form>
+		</div>
+	</div>

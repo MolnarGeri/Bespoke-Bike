@@ -1,0 +1,96 @@
+.container {
+	width: 100vw;
+	min-height: 100vh;
+    background-image: url('kepek/priceback.jpg');
+    background-size: cover;
+    overflow-x: hidden; 
+}
+
+.pricing-container {
+    margin-top: 130px;
+    text-align: center;
+}
+
+.pricing-container h2{
+	color: #fff;
+}
+
+.pricing {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap; /* Hozzáadva: Az elemek egymás alá ugornak, ha kevés a hely */
+    justify-content: space-around;
+}
+
+.package {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    margin: 10px 10px;
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+	transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.package h3 {
+    margin-bottom: 20px; /* További margó a címsor alatt */
+}
+
+.package:hover {
+    transform: scale(1.05);
+	background-color: rgba(205,240,255,0.7);
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #007BFF;
+    margin: 10px 0; 
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#price ul li::before {
+    content: '\2713';
+    color: #007BFF;
+    font-size: 20px;
+    margin-right: 10px;
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 35px;
+    border: 2px solid #007BFF;
+    margin-top: 30px; /* Gombok elhelyezése a csomag alján, 30px-es távolsággal */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #007BFF;
+
+}
+

@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 4em;
+    color: white;
+}
+
+.parallax_wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+}
+
+.intro_screen { height: 100vh;
+	background: url('kepek/front.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.5em;
+    text-align: center;
+}
+
+.intro_content img {
+    display: block;
+    margin: 0 auto; /* Vízszintes középre igazítás */
+    max-width: 450px;
+    height: auto;
+}
+
+.intro_content p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.intro_content a{
+	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+.intro_content a:hover{
+	color: lightblue;
+}
+
+.scroll-down-container {
+    position: fixed;
+	text-decoration: none;
+	bottom: 20px;
+    right: 10px;
+    transform: translateX(-50%);
+    text-align: center;
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+	font-size:24px;	
+	
+	color: #fff;
+}
+.scroll-down-container a{
+    cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+@keyframes scroll {
+   0%  {right: 10px; bottom:40px;opacity: 0.5;}
+  100% {right: 10px; bottom:10px; opacity: 1;}}
+}
+
+.scroll-down-icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+.scroll-down-icon:hover {
+    color: #fff;
+	opacity: 0.5;
+	
+}
+
+
+.social {
+    position: absolute;
+    bottom: 0px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center; /* Középre igazítás vízszintesen */
+    align-items: center;
+    font-size: 2.8rem;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.social a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+}
+
+.social a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.outro_screen {
+    height: 100vh;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax_group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.parallax_layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.base_layer {
+    /*scale calculation: 1+ ((Z transform value * -1)/ perspective) */
+    transform: translateZ(-300px) scale(2);
+	background-image: url('kepek/intro.jpg'); height: 100vh;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.mid_content {
+	display: flex;
+    padding: 10px 20px;
+    min-height: 300px;
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 0.3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mid_content h1 {
+    margin-top: 20px; /* A h1 felső margóját 20px-re állítja be */
+    margin-bottom: 0; /* A h1 alsó margóját 0-ra állítja be */
+}
+
+.mid_content p {
+	margin-top: 20px;
+    text-align: justify;
+    margin: 0;
+}
+
+.top_content {
+     background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 0.33em;
+    display: flex; /* Flex konténerként kezelve a tartalmat */
+    flex-direction: column; /* Tartalmat függőlegesen rendezzük */
+    align-items: center; /* Tartalmat középre igazítjuk */
+}
+
+.top_content h1, .top_content p {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.top_content p {
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.button {
+    margin: 20px auto; /* A 20px mindkét oldalon, auto a vízszintes középre igazításhoz */
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    max-width: 350px; 
+    display: inline-block; /* Ne változtasd meg ezt a display tulajdonságot */
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.outro_content {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+	font-size: 0.6em;
+	width: 100vw;
+	 }
+
+    #map {
+	margin: 0 75px;
+	width: 50%; /* A térkép szélessége, a konténer felének megfelelően */
+    height: 450px; /* A térkép magassága, amit beállíthatsz az igényeidnek megfelelően */
+    }
+
+.outro_text{
+	
+	width: 45%; /* A szöveg szélessége, a konténer másik felének megfelelően */
+	text-align: center;
+	margin-right: 50px;
+}
+
+    .outro_text p{
+      text-align: justify;
+    }
+	
+	
+		
+.mid_secund{
+	background-image: url('kepek/mid.jpg');
+	background-size: cover;
+	
+}
+
+.mid_layer {
+    transform: translateZ(0);
+	
+	}
+
+
+.top_layer {
+    transform: translateZ(210px) scale(0.3);
+}
+
+
+#intro {
+    z-index: 0;
+}
+
+#group-1 {
+    z-index: -1;
+}
+
+#group-1>.base_layer {
+    background-color: crimson;
+}
+
+#group-2 {}
+
+#group-2>.mid_layer {
+    background-color: yellowgreen;
+}
+
+#outro {
+	background-image: url('kepek/outro.jpg');
+	background-size: cover;
+	}
